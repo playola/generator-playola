@@ -5,14 +5,15 @@
 
 First, install [Yeoman](http://yeoman.io) and generator-playola using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
-```bash
+```
 npm install -g yo
 npm install -g generator-playola
 ```
 
-Then generate your new project:
+Create a folder to allocate your project, and then generate it:
 
-```bash
+```
+mkdir my-awesome-project && cd my-awesome-project
 yo playola
 ```
 

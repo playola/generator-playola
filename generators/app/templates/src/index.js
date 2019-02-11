@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <div>
-    <h1>Playola generator</h1>
+    <h1>{ '<%= name %>' } generated successfully!</h1>
   </div>,
   document.getElementById('root'),
 );

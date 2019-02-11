@@ -1,20 +1,13 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the divine ${chalk.red('generator-playola')} generator!`)
-    );
-
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
+        type: 'input',
+        name: 'name',
+        message: 'Your name project',
         default: true
       }
     ];
@@ -26,13 +19,33 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    // Copy the root files
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'),
+      { name: this.props.name }
+    );
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('_webpack.config.js'),
+      this.destinationPath('webpack.config.js')
+    );
+    this.fs.copy(
+      this.templatePath('.babelrc'),
+      this.destinationPath('.babelrc')
+    );
+
+    // Copy application files
+    this.fs.copy(
+      this.templatePath('src/index.html'),
+      this.destinationPath('src/index.html')
+    );
+    this.fs.copy(
+      this.templatePath('src/index.js'),
+      this.destinationPath('src/index.js')
     );
   }
 
   install() {
-    this.installDependencies();
+    this.npmInstall();
   }
 };

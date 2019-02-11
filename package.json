@@ -1,0 +1,43 @@
+{
+  "name": "generator-playola",
+  "version": "0.0.1",
+  "description": "React Webpack generator",
+  "author": {
+    "name": "playola",
+    "email": "playolaizq@gmail.com",
+    "url": "https://playolaizq.com"
+  },
+  "repository": "https://github.com/playola/generator-playola",
+  "license": "ISC",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint ."
+  }
+}

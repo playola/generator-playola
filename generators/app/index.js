@@ -32,10 +32,6 @@ module.exports = class extends Generator {
       this.templatePath('.babelrc'),
       this.destinationPath('.babelrc'),
     );
-    this.fs.copy(
-      this.templatePath('.gitignore'),
-      this.destinationPath('.gitignore'),
-    );
     this.fs.copyTpl(
       this.templatePath('_README.md'),
       this.destinationPath('README.md'),

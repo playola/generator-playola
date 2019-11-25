@@ -1,9 +1,9 @@
-# Dependencies
+# dependencies
 /node_modules
 
-# Tests
+# tests
 /coverage
 
-#Build
+# build
 /dist
 /build

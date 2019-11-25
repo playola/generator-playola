@@ -19,13 +19,6 @@ yo playola
 
 One prompt will be triggered asking for the project name (by default "generator-playola"), and the rest will be added automatically.
 
-Core packages:
-
-  - react
-  - webpack
-  - babel
-  - prop-types
-
 ## License
 
 ISC © [playola](https://playolaizq.com)
